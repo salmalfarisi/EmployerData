@@ -1,2 +1,2 @@
 # EmployerData
-Using Laravel as PHP Framework, AdminLTE 3 as HTML Template and MySQL as Database
+Using Laravel as PHP Framework, AdminLTE 3 as HTML Template and MySQL as Database. check Readme (instruction).txt first
