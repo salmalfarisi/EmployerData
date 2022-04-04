@@ -3,7 +3,7 @@
 php artisan config:clear
 php artisan cache:clear
 php artisan config:clear
-php artisan key:generate
 php artisan migrate:fresh
 php artisan db:seed
+php artisan key:generate
 php artisan serve
