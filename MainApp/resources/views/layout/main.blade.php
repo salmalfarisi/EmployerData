@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Noesantara App</title>
+  <title>Data Karyawan</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -12,7 +12,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css') }}">
 </head>
-<body class="hold-transition overflow-hidden layout-top-nav">
+<body class="hold-transition layout-top-nav">
 <div class="wrapper">
 
   @include('layout.navbar')
@@ -49,7 +49,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-block">
-      Noesantara Corp
+      Data Karyawan
     </div>
   </footer>
 </div>

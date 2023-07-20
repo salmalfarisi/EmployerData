@@ -7,10 +7,11 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th cols="10%">No</th>
+						<th cols="5%">No</th>
 						<th cols="30%">Nama</th>
 						<th cols="20%">Jabatan</th>
 						<th cols="20%">Kantor</th>
+						<th cols="5%">Status</th>
 						<th cols="20%">Pilihan</th>
 					</tr>
 				</thead>
@@ -22,6 +23,7 @@
 							<td>{{ $datas->nama_karyawan }}</td>
 							<td>{{ $datas->jabatan }}</td>
 							<td>{{ $datas->nama_kantor }}</td>
+							<td>{!! ($datas->status == true ? 'Aktif' : 'Tidak Aktif') !!}</td>
 							<td>
 								<div class="d-flex justify-content-center">
 									<a href="{{ route('karyawan.show', $datas->id) }}" class="btn btn-sm btn-info mx-1">Detail</a>

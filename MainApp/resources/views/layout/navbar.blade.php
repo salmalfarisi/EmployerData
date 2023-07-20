@@ -1,10 +1,15 @@
 <!-- Navbar -->
 	  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
 		<div class="container">
-		  <a href="{{ route('user.index') }}" class="navbar-brand">
+		  <a href="{{ route('dashboard') }}" class="navbar-brand">
 			<img src="{{ asset('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 			<span class="brand-text font-weight-light">Employer</span>
 		  </a>
+		  <ul class="order-1 order-md-3 navbar-nav navbar-no-expand mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="{{ route('karyawan.index') }}">Database</a>
+			</li>
+		  </ul>
 
 		  <!-- Right navbar links -->
 		  <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
@@ -29,6 +34,9 @@
 				  </div>
 				</li>
 			@else
+				<li class="nav-item">
+					<a class="nav-link" href="#">{{ Auth::user()->name }}</a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('user.logout') }}">Log Out</a>
 				</li>

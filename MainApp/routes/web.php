@@ -15,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'UserController@index')->name('user.index');
 Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
-    Route::post('login', 'UserController@store')->name('login');
+    Route::post('/login', 'UserController@store')->name('login');
 	Route::get('/logout', 'UserController@logout')->name('logout')->middleware('token');
+	Route::get('/createabsen/{id}', 'UserController@createAbsen')->name('createAbsen');
 });
+
+Route::get('/dashboard', 'UserController@dashboard')->name('dashboard')->middleware('token');
 
 Route::group(['prefix' => 'karyawan', 'as' => 'karyawan.', 'middleware' => 'token'], function () {
 	Route::get('/index', 'EmployerController@index')->name('index');
@@ -27,4 +30,8 @@ Route::group(['prefix' => 'karyawan', 'as' => 'karyawan.', 'middleware' => 'toke
 	Route::get('/edit/{id}', 'EmployerController@edit')->name('edit');
 	Route::post('/update/{id}', 'EmployerController@update')->name('update');
 	Route::get('/delete/{id}', 'EmployerController@destroy')->name('delete');
+});
+
+Route::group(['prefix' => 'api', 'middleware' => 'token'], function () {
+	Route::get('/history/{id}', 'EmployerController@getHistory')->name('History');
 });
